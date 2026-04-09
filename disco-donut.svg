@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -6 100 106">
+  <defs>
+    <radialGradient id="donutBody" cx="50%" cy="40%">
+      <stop offset="0%" stop-color="#ff85c2"/>
+      <stop offset="60%" stop-color="#e8407a"/>
+      <stop offset="100%" stop-color="#c0205a"/>
+    </radialGradient>
+    <radialGradient id="frostingTop" cx="50%" cy="30%">
+      <stop offset="0%" stop-color="#ffb3d9"/>
+      <stop offset="100%" stop-color="#ff5fa0" stop-opacity="0.7"/>
+    </radialGradient>
+    <radialGradient id="holeGrad" cx="50%" cy="50%">
+      <stop offset="0%" stop-color="#200028"/>
+      <stop offset="100%" stop-color="#0a0010"/>
+    </radialGradient>
+    <filter id="donutGlow">
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="boltGlow">
+      <feGaussianBlur stdDeviation="2.2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Donut body -->
+  <circle cx="50" cy="52" r="42" fill="url(#donutBody)" filter="url(#donutGlow)"/>
+
+  <!-- Frosting top layer -->
+  <ellipse cx="50" cy="46" rx="37" ry="26" fill="url(#frostingTop)" opacity="0.85"/>
+
+  <!-- Frosting drips -->
+  <ellipse cx="27" cy="57" rx="5" ry="7" fill="#ffb3d9" opacity="0.9"/>
+  <ellipse cx="75" cy="55" rx="4" ry="6" fill="#ffb3d9" opacity="0.9"/>
+  <ellipse cx="62" cy="62" rx="4"  ry="6" fill="#ffb3d9" opacity="0.85"/>
+  <ellipse cx="38" cy="63" rx="3.5" ry="5" fill="#ffb3d9" opacity="0.8"/>
+
+  <!-- Rainbow sprinkles -->
+  <rect x="32" y="36" width="7"  height="3" rx="1.5" fill="#ffe000" transform="rotate(-20 35 37)"/>
+  <rect x="55" y="32" width="7"  height="3" rx="1.5" fill="#00e5ff" transform="rotate(10 58 33)"/>
+  <rect x="66" y="43" width="6"  height="2.5" rx="1.2" fill="#a0ff60" transform="rotate(-40 68 44)"/>
+  <rect x="42" y="30" width="6"  height="2.5" rx="1.2" fill="#ff6060" transform="rotate(30 44 31)"/>
+  <rect x="71" y="53" width="6"  height="2.5" rx="1.2" fill="#c080ff" transform="rotate(-15 73 54)"/>
+  <rect x="26" y="46" width="6"  height="2.5" rx="1.2" fill="#ff9020" transform="rotate(25 28 47)"/>
+
+  <!-- Donut hole -->
+  <circle cx="50" cy="52" r="18" fill="url(#holeGrad)"/>
+  <circle cx="50" cy="52" r="18" fill="none" stroke="#e8407a" stroke-width="1.5" opacity="0.5"/>
+
+  <!-- Lightning bolt centered in hole -->
+  <path d="M55 32 L43 54 L51 54 L45 72 L63 48 L55 48 Z"
+        fill="#ffe000"
+        stroke="#ff9000"
+        stroke-width="1"
+        stroke-linejoin="round"
+        filter="url(#boltGlow)"
+        opacity="0.97"/>
+  <path d="M54 35 L45 54 L52 54 L47 69 L61 51 L54 51 Z"
+        fill="#fff5a0"
+        opacity="0.45"/>
+</svg>

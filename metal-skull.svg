@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 115">
+  <defs>
+    <radialGradient id="skullGlow" cx="50%" cy="40%">
+      <stop offset="0%" stop-color="#cc1414" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="lensL" cx="40%" cy="35%">
+      <stop offset="0%" stop-color="#cc1414" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="lensR" cx="40%" cy="35%">
+      <stop offset="0%" stop-color="#cc1414" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="neonGlow">
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Skull cranium -->
+  <ellipse cx="50" cy="42" rx="34" ry="36" fill="#0d0000" stroke="#cc1414" stroke-width="2.2" filter="url(#neonGlow)"/>
+  <!-- Inner glow -->
+  <ellipse cx="50" cy="42" rx="34" ry="36" fill="url(#skullGlow)"/>
+
+  <!-- Cheekbone / jaw base -->
+  <rect x="22" y="62" width="56" height="22" rx="6" fill="#0d0000" stroke="#cc1414" stroke-width="2" filter="url(#neonGlow)"/>
+
+  <!-- Jaw teeth -->
+  <rect x="29" y="76" width="8"  height="12" rx="2" fill="#cc1414" opacity="0.9"/>
+  <rect x="39" y="74" width="8"  height="14" rx="2" fill="#cc1414" opacity="0.9"/>
+  <rect x="50" y="74" width="8"  height="14" rx="2" fill="#cc1414" opacity="0.9"/>
+  <rect x="61" y="76" width="8"  height="12" rx="2" fill="#cc1414" opacity="0.9"/>
+
+  <!-- Nose cavity -->
+  <path d="M46 56 L50 63 L54 56 Z" fill="#cc1414" opacity="0.7"/>
+
+  <!-- Crack on top of skull -->
+  <path d="M50 8 L47 20 L50 26 L53 20 Z" stroke="#cc1414" stroke-width="1" fill="none" opacity="0.6"/>
+
+  <!-- ═══ SHADOW SHADES ═══ -->
+  <!-- Left lens -->
+  <rect x="18" y="33" width="26" height="20" rx="9" fill="#050000" stroke="#cc1414" stroke-width="1.8" filter="url(#neonGlow)"/>
+  <rect x="18" y="33" width="26" height="20" rx="9" fill="url(#lensL)"/>
+  <!-- Right lens -->
+  <rect x="56" y="33" width="26" height="20" rx="9" fill="#050000" stroke="#cc1414" stroke-width="1.8" filter="url(#neonGlow)"/>
+  <rect x="56" y="33" width="26" height="20" rx="9" fill="url(#lensR)"/>
+  <!-- Bridge -->
+  <line x1="44" y1="43" x2="56" y2="43" stroke="#cc1414" stroke-width="1.8" filter="url(#neonGlow)"/>
+  <!-- Left arm -->
+  <line x1="14" y1="37" x2="18" y2="43" stroke="#cc1414" stroke-width="1.8" stroke-linecap="round" filter="url(#neonGlow)"/>
+  <!-- Right arm -->
+  <line x1="86" y1="37" x2="82" y2="43" stroke="#cc1414" stroke-width="1.8" stroke-linecap="round" filter="url(#neonGlow)"/>
+
+  <!-- Lens highlight specks -->
+  <circle cx="26" cy="38" r="2" fill="#cc1414" opacity="0.5"/>
+  <circle cx="64" cy="38" r="2" fill="#cc1414" opacity="0.5"/>
+</svg>
